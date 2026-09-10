@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<title>Admin Login — Sanctuary of Hope Ministries</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <a href="index.html" class="brand" style="margin-bottom: 2rem;">
+    <img class="logo-mark" src="assets/logo-icon.png" alt="Sanctuary of Hope Ministries logo">
+    <span class="brand-name">Sanctuary of Hope<span>Admin</span></span>
+  </a>
+
+  <h1>Admin login</h1>
+  <p style="color: var(--ink-soft);">Sign in to post sermons and manage content.</p>
+
+  <form id="login-form">
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="username">
+    </div>
+    <div class="form-field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required autocomplete="current-password">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+    <div id="login-status" class="form-status" role="status"></div>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/admin-login.js"></script>
+</body>
+</html>
