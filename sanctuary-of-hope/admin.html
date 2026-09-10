@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Sanctuary of Hope Ministries</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom: 2rem;">
+    <a href="index.html" class="brand">
+      <span class="logo-slot" aria-hidden="true">LOGO</span>
+      <span class="brand-name">Sanctuary of Hope<span>Admin</span></span>
+    </a>
+    <button id="logout-btn" class="btn btn-outline">Sign out</button>
+  </div>
+
+  <h1>Post a sermon</h1>
+  <p style="color: var(--ink-soft);">This appears immediately on the Sermons page and the homepage &mdash; no video or audio, just the message and a picture of the minister.</p>
+
+  <form id="sermon-form">
+    <div class="form-field">
+      <label for="title">Sermon title</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    <div class="form-field">
+      <label for="minister_name">Minister's name</label>
+      <input type="text" id="minister_name" name="minister_name" required>
+    </div>
+    <div class="form-field">
+      <label for="scripture_reference">Scripture reference</label>
+      <input type="text" id="scripture_reference" name="scripture_reference" placeholder="e.g. Romans 8:28">
+    </div>
+    <div class="form-field">
+      <label for="minister_photo">Minister's photo</label>
+      <input type="file" id="minister_photo" name="minister_photo" accept="image/*">
+    </div>
+    <div class="form-field">
+      <label for="body">Message</label>
+      <textarea id="body" name="body" required style="min-height: 220px;"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Post sermon</button>
+    <div id="form-status" class="form-status" role="status"></div>
+  </form>
+
+  <h2 style="margin-top: 3rem;">Posted sermons</h2>
+  <div id="admin-sermon-list" class="admin-list"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
