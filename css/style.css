@@ -173,21 +173,13 @@ p { margin: 0 0 1em; max-width: 62ch; }
   min-width: 0;
 }
 
-.logo-slot {
-  width: 50px;
-  height: 50px;
+.logo-mark {
+  width: 46px;
+  height: 46px;
   flex: none;
-  border: 1.5px dashed var(--blue-light);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue-mid);
-  font-size: 0.58rem;
-  font-family: var(--font-body);
-  text-align: center;
-  line-height: 1.1;
-  background: var(--blue-pale);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
 }
 
 .brand-name {
