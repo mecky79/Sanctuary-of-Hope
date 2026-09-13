@@ -956,3 +956,20 @@ p { margin: 0 0 1em; max-width: 62ch; }
   border-color: var(--red-dark);
   color: var(--red-dark);
 }
+
+.current-photo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.current-photo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--blue-light);
+}
