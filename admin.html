@@ -22,10 +22,11 @@
     <button id="logout-btn" class="btn btn-outline">Sign out</button>
   </div>
 
-  <h1>Post a sermon</h1>
+ <h1 id="form-heading">Post a sermon</h1>
   <p style="color: var(--ink-soft);">This appears immediately on the Sermons page and the homepage &mdash; no video or audio, just the message and a picture of the minister.</p>
 
   <form id="sermon-form">
+    <input type="hidden" id="sermon_id" value="">
     <div class="form-field">
       <label for="title">Sermon title</label>
       <input type="text" id="title" name="title" required>
@@ -40,16 +41,18 @@
     </div>
     <div class="form-field">
       <label for="minister_photo">Minister's photo</label>
+      <div id="current-photo-preview"></div>
       <input type="file" id="minister_photo" name="minister_photo" accept="image/*">
+      <p class="form-note" id="photo-hint" style="display:none;">Leave this blank to keep the current photo.</p>
     </div>
     <div class="form-field">
       <label for="body">Message</label>
       <textarea id="body" name="body" required style="min-height: 220px;"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Post sermon</button>
+    <button type="submit" id="submit-btn" class="btn btn-primary">Post sermon</button>
+    <button type="button" id="cancel-edit-btn" class="btn btn-outline" style="display:none;">Cancel edit</button>
     <div id="form-status" class="form-status" role="status"></div>
   </form>
-
   <h2 style="margin-top: 3rem;">Posted sermons</h2>
   <div id="admin-sermon-list" class="admin-list"></div>
 </div>
