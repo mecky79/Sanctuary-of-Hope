@@ -53,8 +53,45 @@
     <button type="button" id="cancel-edit-btn" class="btn btn-outline" style="display:none;">Cancel edit</button>
     <div id="form-status" class="form-status" role="status"></div>
   </form>
-  <h2 style="margin-top: 3rem;">Posted sermons</h2>
+ <h2 style="margin-top: 3rem;">Posted sermons</h2>
   <div id="admin-sermon-list" class="admin-list"></div>
+
+  <hr style="margin: 3rem 0; border: none; border-top: 1px solid var(--line);">
+
+  <h1 id="leader-form-heading">Add a pastor or leader</h1>
+  <p style="color: var(--ink-soft);">Check "Featured (senior pastor)" for the one person who should appear in the large bio card at the top of the Leadership page. Leave it unchecked for everyone else — they'll appear in the team grid below it.</p>
+
+  <form id="leader-form">
+    <input type="hidden" id="leader_id" value="">
+    <div class="form-field">
+      <label for="leader_name">Name</label>
+      <input type="text" id="leader_name" name="leader_name" required>
+    </div>
+    <div class="form-field">
+      <label for="leader_role">Role</label>
+      <input type="text" id="leader_role" name="leader_role" placeholder="e.g. Senior Pastor, Elder, Youth Leader" required>
+    </div>
+    <div class="form-field">
+      <label for="leader_photo">Photo</label>
+      <div id="current-leader-photo-preview"></div>
+      <input type="file" id="leader_photo" name="leader_photo" accept="image/*">
+      <p class="form-note" id="leader-photo-hint" style="display:none;">Leave this blank to keep the current photo.</p>
+    </div>
+    <div class="form-field">
+      <label for="leader_bio">Biography <span style="font-weight:400; color: var(--ink-soft);">(shown only if featured)</span></label>
+      <textarea id="leader_bio" name="leader_bio" style="min-height: 140px;"></textarea>
+    </div>
+    <div class="form-field" style="display:flex; align-items:center; gap:0.6rem;">
+      <input type="checkbox" id="leader_is_featured" name="leader_is_featured" style="width:auto;">
+      <label for="leader_is_featured" style="margin:0;">Featured (senior pastor)</label>
+    </div>
+    <button type="submit" id="leader-submit-btn" class="btn btn-primary">Add to Leadership page</button>
+    <button type="button" id="leader-cancel-edit-btn" class="btn btn-outline" style="display:none;">Cancel edit</button>
+    <div id="leader-form-status" class="form-status" role="status"></div>
+  </form>
+
+  <h2 style="margin-top: 3rem;">Pastors &amp; leaders</h2>
+  <div id="admin-leader-list" class="admin-list"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
