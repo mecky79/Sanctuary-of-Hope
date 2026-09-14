@@ -703,6 +703,55 @@ p { margin: 0 0 1em; max-width: 62ch; }
   overflow: hidden;
 }
 
+/* ---------- Leadership photos ---------- */
+
+.leader-photo-lg,
+.leader-photo-lg-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.leader-photo-lg {
+  object-fit: cover;
+  border: 1px solid var(--blue-light);
+}
+
+.leader-photo-lg-placeholder {
+  background: var(--blue-pale);
+  border: 1px solid var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-mid);
+  font-size: 2.6rem;
+}
+
+.card-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--blue-light);
+  background: var(--blue-pale);
+}
+
+.card-photo-placeholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  background: var(--blue-pale);
+  border: 1px solid var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-mid);
+  font-size: 1.4rem;
+}
+
 .text-link-btn {
   background: none;
   border: none;
